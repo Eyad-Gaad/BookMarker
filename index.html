@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/all.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/media.css">
+    <link rel="icon" href="Images/865288.png">
+    <script src="Java Script/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Container -->
+     
+    <div class="container">
+        <div class="row gy-5">
+            <div class="col-12">
+                <div class="title1 d-flex flex-column align-items-center position-relative">
+                <h2 class="pacifico m-0 fa-4x opacity-25">Bookmarker</h2>
+                <h1 class="pacifico m-0 fa-3x position-absolute">Bookmarker</h1>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="item d-flex flex-column align-items-center py-4">
+                    <div class="title2 d-flex align-items-center mb-5">
+                        <i class="fa-solid fa-bookmark pe-1 fs-6 mb-1"></i> 
+                        <h2 class="fs-5 Righteous fw-bold">Bookmark your favorite sites</h2>
+                        <i class="fa-solid fa-bookmark ps-1 fs-6 mb-1"></i>
+                    </div>
+                    <form class="col-12 col-lg-10 col-xl-8">
+                        <label for="siteName" class="text-center mb-3 SansCaption fw-semibold fs-5"><i class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label>
+                        <input id="siteName" type="text" class="col-11 rounded-2 mb-5 px-3" placeholder="BookMark Name">
+                        <i class="warning fa-solid fa-triangle-exclamation ms-1 text-danger d-none"></i>
+                        <i class="checked fa-solid fa-circle-check ms-1 text-success d-none"></i>
+                        <label for="siteUrl" class="text-center mb-3 SansCaption fw-semibold fs-5"><i class="fa-solid fa-link pe-2"></i>Site URL</label>
+                        <input id="siteUrl" type="text" class="col-11 rounded-2 mb-5 px-3" placeholder="protocol://www.example.com/path">
+                        <i class="warning fa-solid fa-triangle-exclamation ms-1 text-danger d-none"></i>
+                        <i class="checked fa-solid fa-circle-check ms-1 text-success d-none"></i>
+                        <button type="button" id="submit" class="btn btn-outline-secondary d-block mx-auto col-5 col-md-3 SansCaption fw-semibold border-2 rounded-3">Add Bookmark</button>
+                        <button type="button" id="edit" class="btn btn-outline-warning d-none mx-auto col-5 col-md-3 SansCaption fw-semibold border-2 rounded-3">Edit Bookmark</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-12">
+                    <label for="search" class="mx-auto col-6 d-block text-center mb-3 SansCaption fw-semibold fs-5"><i class="fa-solid fa-magnifying-glass pe-2"></i>Search</label>
+                    <input id="search" type="text" class="mx-auto d-block col-10 col-md-8 col-lg-6 rounded-2 mb-5 px-3" placeholder="Search">
+                <table class="bg-secondary-subtle w-100 SansCaption text-center">
+                    <thead class="fw-bold">
+                        <tr>
+                            <th>Index</th>
+                            <th>Website Name</th>
+                            <th>Visit</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Validation Modal -->
+
+    <div class="layer position-fixed top-0 bottom-0 start-0 end-0 d-flex justify-content-center align-items-center d-none">
+        <div class="inner-layer bg-white py-4 px-4 rounded-3 col-11 col-sm-10 col-md-8 col-lg-6">
+            <div class="col-12 d-flex justify-content-between align-items-center mb-4">
+                <div class="circules">
+                    <div class="circule d-inline-block bg-black"></div>
+                    <div class="circule d-inline-block"></div>
+                    <div class="circule d-inline-block bg-secondary"></div>
+                </div>
+                <i id="close" class="fa-solid fa-xmark fs-3"></i>
+            </div>
+            <p class="bree fs-5">Site Name or Url is not valid, Please follow the rules below :</p>
+            <p class="SansCaption text-secondary"><i class="fa-solid fa-caret-right me-2 text-dark"></i> Site name must contain at least 3 characters.</p>
+            <p class="SansCaption text-secondary"><i class="fa-solid fa-caret-right me-2 text-dark"></i> Site URL must be a valid one.</p>
+        </div>
+    </div>
+    <script src="Java Script/index.js"></script>
+</body>
+</html>
